@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body, html {
+    width: 100%;
+    overflow-x: hidden;
+    font-family: 'Courier New', Courier, monospace;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure full viewport height */
+}
+
+.main-content {
+    flex: 1; /* Pushes footer to the bottom */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1E2A38;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-style: italic;
+    color: white;
+    font-size: 22px;
+    margin-left: 15px; /* Push logo to the left */
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Add spacing between links */
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+    flex: 1; /* Allow it to take up space */
+    max-width: 350px;
+    margin: 0 15px;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 14px;
+    width: 100%;
+    background: transparent;
+}
+
+.search-bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+
+/* ✅ Make Navbar Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .search-bar {
+        max-width: 200px; /* Reduce width for smaller screens */
+    }
+
+    .links {
+        gap: 10px;
+    }
+
+    .links a, .links svg {
+        font-size: 18px;
+    }
+}
